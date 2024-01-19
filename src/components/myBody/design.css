@@ -1,0 +1,87 @@
+.btntext {
+  transition: all 2s;
+  animation-name: moveUp;
+  animation-duration: 1s;
+}
+.btntext:hover {
+  background-color: darkblue;
+}
+
+.btn {
+  transition: all 0.5s;
+}
+
+.btntext:hover .btn {
+  transform: translateX(10px);
+}
+
+.color {
+  color: gold;
+}
+
+.smaller {
+  margin-left: 10px;
+  animation: sizer 1s linear infinite;
+}
+
+.titleOne {
+  animation-name: moveRight;
+  animation-duration: 1s;
+}
+
+.titleTwo {
+  animation-name: moveLeft;
+  animation-duration: 1.3s;
+}
+
+.titleThree {
+  animation-name: moveRight;
+  animation-duration: 1.6s;
+}
+
+.Image {
+  animation-name: moveRight;
+  animation-duration: 0.7s;
+}
+
+@keyframes sizer {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

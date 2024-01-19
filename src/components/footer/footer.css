@@ -1,0 +1,40 @@
+.wrap:hover .in {
+  background: yellow;
+}
+
+.wrap:hover .out {
+  color: yellow;
+}
+
+.wraps:hover {
+  background: #01172c;
+  border: 1px solid #fff;
+}
+
+.wraps:hover .inner {
+  display: none;
+}
+
+.outer{
+    display: none;
+}
+
+.wraps:hover .outer {
+  display: block;
+}
+
+
+.smalls{
+  position: relative;
+  top: 2px;
+  margin: 0px 10px;
+  animation: sizer 1s linear infinite;
+}
+
+@keyframes sizer {
+  from{
+    transform: scale(1.2);
+  } to{
+    transform: scale(1.8);
+  }
+}

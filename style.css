@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.me {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: linear-gradient(90deg, #4a17c0, #01172c);
+  color: rgb(34, 170, 34);
+  color: rgb(92, 120, 204);
+}
+
+.active {
+  padding-bottom: 12px;
+  border-bottom: solid 5px orange;
+}
+
+.test {
+  color: rgb(223, 217, 217);
+  border-top-left-radius: 10px;
+}
+
+.activeTitle {
+  color: yellow !important;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border-top: solid 3px red;
+  border-bottom: solid 3px red;
+  font-size: 35px !important;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 425px) {
+  .activeTitle {
+    font-size: 24px !important;
+  }
+}
+
+.vasya {
+  display: none;
+  /* position: absolute; */
+  /* z-index: -100000000000; */
+}
+
+.ivan {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .vasya {
+    display: block;
+    /* position: relative; */
+    /* z-index: 10000000; */
+  }
+  .ivan{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .vasya{
+    display: none;
+  }
+}

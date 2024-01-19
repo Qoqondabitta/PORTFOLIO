@@ -1,0 +1,29 @@
+.btntext {
+  transition: all 2s;
+}
+.btntext:hover {
+  background-color: darkblue;
+}
+
+.btn {
+  transition: all 0.5s;
+}
+
+.btntext:hover .btn {
+  transform: translateX(10px);
+}
+
+.smaller {
+  position: relative;
+  top: -5px;
+  animation: sizer 1s linear infinite;
+}
+
+@keyframes sizer {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.01);
+  }
+}
