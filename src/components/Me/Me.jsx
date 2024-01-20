@@ -20,7 +20,7 @@ import useNav from "../../hooks/useNav";
 import { motion } from "framer-motion";
 import { TitleWrapper, Title } from "../experience/style";
 import { IoIosArrowForward } from "react-icons/io";
-import "./design.css";
+import "./me.css";
 import { ImUser } from "react-icons/im";
 import { MdWavingHand } from "react-icons/md";
 import Slider from "../Slider/Slider";
@@ -116,7 +116,7 @@ const MePart = () => {
             >
               <Sub style={{ color: "gold" }}>
                 I'm Abdulakhad{" "}
-                <MdWavingHand className="smaller" size="0.7em" color="gold" />
+                <MdWavingHand className="wavinHand" size="0.7em" color="gold" />
               </Sub>
               <Text style={{ marginBottom: "30px" }}>Front-End Developer</Text>
               <Text style={{ marginBottom: "20px" }}>

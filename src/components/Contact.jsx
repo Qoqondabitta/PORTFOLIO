@@ -13,7 +13,22 @@ import { styled } from "styled-components";
 import useNav from "../hooks/useNav";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { Title, TitleWrapper } from "./experience/style";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+import it from "../assets/additional/it.jpg";
+import { Tilt } from "react-tilt";
+
+
+const opt = {
+  reverse: true, // reverse the tilt direction
+  max: 35, // max tilt rotation (degrees)
+  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+  scale: 1, // 2 = 200%, 1.5 = 150%, etc..
+  speed: 1000, // Speed of the enter/exit transition
+  transition: true, // Set a transition on enter/exit.
+  axis: null, // What axis should be disabled. Can be X or Y.
+  reset: true, // If the tilt effect has to be reset on exit.
+  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+};
 
 const Section = styled.div`
   height: 100vh;
@@ -26,20 +41,28 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  @media screen and (max-width: 375px) {
-    flex-direction: column;
-  }
-  @media only screen and (max-width: 425px) {
-    flex-direction: column;
-    /* width: 425px; */
+  @media only screen and (max-width: 450px) {
+    position: relative;
+    top: -200px;
   }
   @media only screen and (max-width: 768px) {
     justify-content: flex-start;
     flex-direction: column;
-    gap: 0px;
-    /* background: red; */
-    height: 600px;
+    height: fit-content;
     align-items: center;
+  }
+`;
+
+export const Technologist = styled.img`
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  display: none;
+  object-fit: cover;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 450px) {
+    display: block;
   }
 `;
 
@@ -128,6 +151,18 @@ const Contact = () => {
             </Form>
           </motion.div> */}
         </ContactLeft>
+
+        <Tilt
+          className="titleThree"
+          options={opt}
+          style={{
+            height: "300px",
+            width: "400px",
+            margin: "0 auto",
+          }}
+        >
+          <Technologist src={it} />
+        </Tilt>
         <ContactRight>
           <Map />
         </ContactRight>

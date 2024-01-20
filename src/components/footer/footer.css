@@ -24,17 +24,19 @@
 }
 
 
-.smalls{
+.heart{
   position: relative;
   top: 2px;
   margin: 0px 10px;
-  animation: sizer 1s linear infinite;
+  animation: redHeart 1s linear infinite;
 }
 
-@keyframes sizer {
+@keyframes redHeart {
   from{
     transform: scale(1.2);
+    color: skyblue;
   } to{
     transform: scale(1.8);
+    color: red;
   }
 }

@@ -107,3 +107,9 @@
         display: block;
     }
 }
+
+@media only screen and (max-width: 768px) {
+  .vayvo{
+    color: #da4ea2 !important;
+  }
+}

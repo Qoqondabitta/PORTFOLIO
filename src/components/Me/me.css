@@ -13,17 +13,19 @@
   transform: translateX(10px);
 }
 
-.smaller {
+.wavinHand {
   position: relative;
-  top: -5px;
-  animation: sizer 1s linear infinite;
+  right: -5px;
+  animation: handYellow 1s linear infinite;
 }
 
-@keyframes sizer {
+@keyframes handYellow {
   from {
-    transform: scale(1);
+    transform: scale(0.8);
+    color: brown;
   }
   to {
-    transform: scale(1.01);
+    transform: scale(1.3);
+    color: gold;
   }
 }

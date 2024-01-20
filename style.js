@@ -299,6 +299,11 @@ const ContactLeft = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
+
+  @media only screen and (max-width: 450px) {
+    position: relative;
+    top: -100px;
+  }
   /* background: red; */
   @media only screen and (max-width: 768px) {
     align-items: center;

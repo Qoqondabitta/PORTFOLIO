@@ -19,7 +19,12 @@ const Section = styled.div`
   flex-direction: column;
   margin-top: 100px;
   margin-bottom: 100px;
-  
+
+  @media only screen and (max-width: 450px) {
+    position: relative;
+    top: -400px;
+  }
+
   @media only screen and (max-width: 768px) {
     margin-bottom: 30px;
     margin-top: 30px;

@@ -6,10 +6,11 @@ export const Section = styled.div`
   align-items: center;
   justify-content: center;
   background: #01172c;
-
-  @media only screen and (max-width: 768px) {
-    /* margin-top: 60px; */
-  }
+/* 
+  @media only screen and (max-width: 450px) {
+    position: relative;
+    top: -1150px;
+  } */
 `;
 
 export const Container = styled.div`
@@ -57,6 +58,14 @@ export const Span = styled.span`
 `;
 
 export const Texts = styled.p`
+  color: #fff;
+  font-size: 20px;
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+`;
+
+export const Call = styled.a`
   color: #fff;
   font-size: 20px;
   @media only screen and (max-width: 768px) {

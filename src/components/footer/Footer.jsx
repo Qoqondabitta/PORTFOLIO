@@ -15,6 +15,7 @@ import {
   Link,
   Span,
   Update,
+  Call,
 } from "./style";
 import "./footer.css";
 import { TitleSharp } from "../../utils/motion";
@@ -28,7 +29,11 @@ import { FaPhone } from "react-icons/fa6";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 
+
+
 const Footer = () => {
+const phone = "+48795692941"
+
   const handleTelegramClick = () => {
     window.open("https://t.me/Hammasi_Ota_Onam_Sababli", "_blank"); // Use 'tel://' protocol to open Telegram
   };
@@ -68,7 +73,7 @@ const Footer = () => {
           </Texts>
           <Texts>Keep Rising 🚀. Stay Tuned, see you soon ✋</Texts>
           <Texts style={{ marginTop: "30px" }}>
-            Designed with <FaHeart color="red" className="smalls" /> By
+            Designed with <FaHeart color="red" className="heart" /> By
             <span style={{ color: "yellow" }}> Abdulakhad</span>
           </Texts>
           <Links>
@@ -110,7 +115,7 @@ const Footer = () => {
             </Detail>
             <Detail>
               <FaMapMarkedAlt size="1.4em" color="gold" />
-              <Texts>+998-90-111-65-54</Texts>
+              <Call href={`tel:${phone}`}>+998-90-111-65-54</Call>
             </Detail>
             <Detail>
               <Bigger onClick={handleGitHubClick} className="wraps">
