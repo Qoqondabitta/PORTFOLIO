@@ -136,12 +136,12 @@ export const TitleSharps = [
     href: "#models",
   },
   {
-    title: "Experience",
-    href: "#experience",
-  },
-    {
     title: "Who",
     href: "#who",
+  },
+  {
+    title: "Experience",
+    href: "#experience",
   },
   {
     title: "Contact",

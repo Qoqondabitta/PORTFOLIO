@@ -5,11 +5,11 @@ export const Container = styled.div`
   height: 100vh;
   @media only screen and (max-width: 450px) {
     position: relative;
-    top: -450px;
+    top: -350px;
     height: 732px;
   }
   @media only screen and (max-width: 768px) {
-    width: 370px;
+    width: 350px;
     margin-top: 100px;
     margin-bottom: 100px;
   }

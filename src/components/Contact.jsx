@@ -55,16 +55,29 @@ const Container = styled.div`
   }
 `;
 
+export const ResRight = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  @media only screen and (max-width: 450px) {
+    display: block;
+  }
+`;
+
 export const Technologist = styled.img`
   width: 300px;
   height: 400px;
   border-radius: 10px;
   display: none;
   object-fit: cover;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
   @media only screen and (max-width: 450px) {
     display: block;
+    position: relative;
+    top: -30px;
   }
 `;
 
@@ -153,18 +166,19 @@ const Contact = () => {
             </Form>
           </motion.div> */}
         </ContactLeft>
-
-        <Tilt
-          className="titleThree"
-          options={opt}
-          style={{
-            height: "300px",
-            width: "400px",
-            margin: "0 auto",
-          }}
-        >
-          <Technologist src={it} />
-        </Tilt>
+        <ResRight>
+          <Tilt
+            // className="titleThree"
+            options={opt}
+            style={{
+              height: "400px",
+              width: "300px",
+              margin: "0 auto",
+            }}
+          >
+            <Technologist src={it} />
+          </Tilt>
+        </ResRight>
         <ContactRight>
           <Map />
         </ContactRight>

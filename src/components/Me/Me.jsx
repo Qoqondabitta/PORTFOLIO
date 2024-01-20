@@ -112,7 +112,7 @@ const MePart = () => {
               whileInView="visible"
               viewport={{ amount: 0.2, once: true }}
               variants={divAnimation}
-              custom={0}
+              custom={1}
             >
               <Sub style={{ color: "gold" }}>
                 I'm Abdulakhad{" "}

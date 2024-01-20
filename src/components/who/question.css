@@ -1,0 +1,21 @@
+.question{
+    position: relative;
+    top: -10px;
+    animation: yellowQuestion 1s linear infinite;
+}
+
+@keyframes yellowQuestion {
+  from{
+    transform: scale(0.5);
+    color: brown;
+  } to{
+    transform: scale(1);
+    color: gold;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+    .question{
+        top: -3px;
+    }
+}

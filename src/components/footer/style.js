@@ -68,6 +68,7 @@ export const Texts = styled.p`
 export const Call = styled.a`
   color: #fff;
   font-size: 20px;
+  text-decoration: none;
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }

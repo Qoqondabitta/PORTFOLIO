@@ -302,7 +302,7 @@ const ContactLeft = styled.div`
 
   @media only screen and (max-width: 450px) {
     position: relative;
-    top: 150px;
+    top: 80px;
   }
   /* background: red; */
   @media only screen and (max-width: 768px) {

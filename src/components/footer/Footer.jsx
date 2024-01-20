@@ -106,15 +106,15 @@ const phone = "+48795692941"
           </Titles>
           <Right>
             <Detail>
-              <FaPhone size="1.3em" color="gold" />
-              <Texts>+998-90-111-65-54</Texts>
+              <FaMapMarkedAlt size="1.4em" color="gold" />
+              <Texts>Tashkent, Uzbekistan</Texts>
             </Detail>
             <Detail>
               <MdEmail size="1.4em" color="gold" />
               <Texts>iamabdulakhad@gmail.com</Texts>
             </Detail>
             <Detail>
-              <FaMapMarkedAlt size="1.4em" color="gold" />
+              <FaPhone size="1.3em" color="gold" />
               <Call href={`tel:${phone}`}>+998-90-111-65-54</Call>
             </Detail>
             <Detail>
