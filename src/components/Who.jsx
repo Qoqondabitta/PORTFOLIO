@@ -1,20 +1,18 @@
 import React from "react";
 import {
-  Button,
-  // HeroContainer,
+  Buttons,
   HeroDescription,
-  // HeroLeft,
-  // HeroRight,
   HeroSubtitle,
   HeroTitle,
   Line,
   What,
-  // WhoSection,
 } from "../../style";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
 import { styled } from "styled-components";
+import ReactTyped from "react-typed";
+import useNav from "../hooks/useNav";
 
 const Section = styled.div`
   height: 100vh;
@@ -22,8 +20,13 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
 
+  @media only screen and (max-width: 450px) {
+    position: relative;
+    top: -400px;
+  }
   @media only screen and (max-width: 768px) {
     width: 100%;
+    flex-direction: column;
   }
 `;
 
@@ -49,26 +52,72 @@ const Right = styled.div`
   gap: 20px;
 
   height: 100vh;
-  /* background: red; */
   @media only screen and (max-width: 768px) {
     align-items: center;
     text-align: center;
-    gap: 10px;
-  /* display: none; */
-}
+  }
 `;
 
 const Left = styled.div`
   flex: 1;
   @media only screen and (max-width: 768px) {
-background: red;
-    display: none;
+    /* background: red; */
+    /* display: none; */
   }
 `;
 
+const Button = styled.button`
+  width: 100%;
+  padding: 20px;
+  background: #da4ea2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+    width: 300px;
+    padding: 10px;
+  }
+`;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+`;
+
+export const Title = styled.h1`
+  color: #fff;
+  text-align: center;
+  font-size: 45px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 36px;
+  }
+`;
+
+const stringToRender = [
+  " Front-End Developer 👨‍💻",
+  " Tv Hoster 👨‍⚖️",
+  " Mentor 👨‍🏫",
+  " Team Leader 🦸‍♂️",
+  " Opponent 😈",
+  " Friend 👥",
+  " New Student 🧑‍🎓",
+];
+
 const Who = () => {
+  const whoRef = useNav("Who")
   return (
-    <Section>
+    <Section ref={whoRef} id="who">
+        <TitleWrapper>
+          <Title>Who</Title>
+          <Title style={{color: "gold"}}> ?</Title>
+        </TitleWrapper>
       <Container>
         <Left>
           <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
@@ -79,18 +128,27 @@ const Who = () => {
           </Canvas>
         </Left>
         <Right>
-          <HeroTitle>Think Outside The Box</HeroTitle>
+          <HeroTitle>Let's Find Out</HeroTitle>
           <What>
             <Line src="./images/line.png" />
-            <HeroSubtitle>Who We Are</HeroSubtitle>
+            <HeroSubtitle>Who am I for you ?</HeroSubtitle>
           </What>
           <HeroDescription>
-            An experienced, accomplished and diligent developers with unbridled
-            passion for programming.
+            maybe{" "}
+            <ReactTyped
+              strings={stringToRender}
+              typeSpeed={60}
+              backSpeed={50}
+              className="color"
+              loop
+            ></ReactTyped>
           </HeroDescription>
-          <Button style={{ marginTop: "20px", width: "fit-content" }}>
-            See Our Works
-          </Button>
+          <a href="#contact">
+            {" "}
+            <Button style={{ marginTop: "20px"}}>
+              Hire Now
+            </Button>
+          </a>{" "}
         </Right>
       </Container>
     </Section>

@@ -46,10 +46,12 @@ const Container = styled.div`
     top: -200px;
   }
   @media only screen and (max-width: 768px) {
-    justify-content: flex-start;
-    flex-direction: column;
-    height: fit-content;
-    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 850px;
+    align-items: space-between;
+    /* background: red; */
+    /* gap: 50px; */
   }
 `;
 

@@ -9,6 +9,7 @@ import Question from "./components/Q&A/Question";
 import Experience from "./components/experience/Experience";
 import Footer from "./components/footer/Footer";
 import MePart from "./components/Me/Me";
+import Who from "./components/Who";
 
 const Container = styled.div`
   height: 100vh;
@@ -45,6 +46,7 @@ function App() {
         <About />
         <Works />
         <Experience />
+        <Who />
         <Contact />
         <Question />
         <Footer />
